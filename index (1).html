@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="댐에서 우리 집까지, 직접 체험하며 배우는 정수 과정 게임">
+  <title>물의 여행 · 정수장 체험 게임</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="game.js" defer></script>
+</head>
+<body>
+  <header><a class="brand" href="./">◈ 물의 여행</a><span>SDG 6 · 깨끗한 물과 위생</span><button id="bookButton" class="ghost">학습 도감 <span id="cardCount">0</span></button></header>
+  <main>
+    <div class="intro"><div><p class="eyebrow">작은 물방울의 커다란 여정</p><h1>깨끗한 물은<br>어떻게 우리 집에 올까요?</h1><p>오늘은 내가 정수 처리 담당자! 물을 따라 여행하며 알아보세요.</p></div><div class="difficulty"><label for="difficulty">처음 물의 오염도</label><select id="difficulty"><option value="1">보통 · 처음이라면</option><option value="2">높음 · 조금 더 도전</option></select><span>약 3분 · 마우스 또는 터치</span></div></div>
+    <ol id="journey" aria-label="정수 처리 단계"></ol>
+    <section class="game-grid">
+      <div class="scene-panel"><div class="scene-top"><span id="location">댐</span><span id="stageLabel">1 / 10</span></div><div id="scene" class="scene"><div class="cloud cloud-one"></div><div class="cloud cloud-two"></div><div class="hill"></div><div class="hill second"></div><div class="tank"><div class="water" id="water"><div id="particles"></div><div class="droplet"><i></i><i></i><b></b></div></div><div id="filterLayers"></div></div><div class="ground"></div><span class="scene-caption" id="sceneCaption">모든 여행은 한 방울에서 시작해요.</span></div><div class="water-status"><span>물의 맑기 <strong id="clarity">10%</strong></span><progress id="quality" max="100" value="10">10%</progress><small>게임 속 이해를 돕는 지표예요.</small></div></div>
+      <section class="control-panel" aria-labelledby="stageTitle"><p id="step" class="eyebrow">STAGE 01</p><h2 id="stageTitle"></h2><p id="description"></p><div id="controls"></div><div id="feedback" role="status" aria-live="polite"></div><button id="next" class="primary" hidden>다음 단계</button><div class="effort"><span>처리 노력 <strong id="effort">0</strong></span><span>수집 카드 <strong id="collected">0 / 10</strong></span></div><p class="note">시간·약품·에너지를 합쳐 표현한 게임 점수이며 실제 정수 비용과는 달라요.</p></section>
+    </section>
+    <footer><span>댐에서 우리 집까지, 물 한 방울을 소중하게.</span><a href="https://www.kwater.or.kr/news/onmuseum/tech01Page.do?s_mid=2107" target="_blank" rel="noopener">참고: K-water 수도기술관</a><button class="text-button" id="restart">처음부터 다시</button></footer>
+  </main>
+  <dialog id="book"><div class="dialog-head"><h2>나의 물 지식 도감</h2><button id="closeBook" class="ghost">닫기</button></div><div id="cards"></div></dialog>
+</body>
+</html>
