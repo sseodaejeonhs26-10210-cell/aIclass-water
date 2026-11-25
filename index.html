@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="ko">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#091d25"><meta name="description" content="우리 집에서 강까지, 직접 체험하는 물 한 방울의 3D 여행. UN 지속가능발전목표 6과 하수 처리 과정을 만나보세요."><title>물의 여행 · 한 방울의 다음 장면</title><link rel="stylesheet" href="style.css"><script type="module" src="game.js"></script></head>
+<body>
+<main id="experience">
+ <div id="scene"><canvas id="world" aria-label="직접 조작하는 3D 물 처리 모형"></canvas></div>
+ <div class="vignette"></div>
+ <header><a class="brand" href="./"><svg viewBox="0 0 36 42" aria-hidden="true"><path d="M18 2C15 10 3 19 3 27a15 15 0 0 0 30 0C33 19 21 10 18 2Z" fill="currentColor"/><path d="M9 28c5 4 13 4 18-2" fill="none" stroke="#092831" stroke-width="2"/></svg><span>물의 여행<small>A WATER ODYSSEY</small></span></a><nav><span class="sdg"><b>6</b><span>깨끗한 물과 위생<small>UN SUSTAINABLE DEVELOPMENT GOALS</small></span></span><button id="about" class="round" aria-label="물 이야기와 도움말">?</button><button id="audio" class="round" aria-label="소리 켜기" aria-pressed="false">♫</button></nav></header>
+ <div class="chapter"><span id="chapterLabel">CHAPTER 01 · 우리의 일상</span><div class="chapter-line"></div><span id="chapterNum">01 / 07</span></div>
+ <section class="intro"><p class="eyebrow" id="eyebrow">모든 여행은, 우리 집에서</p><h1 id="title">내가 쓴 물은<br>어디로 갈까요?</h1><p id="description">수도꼭지를 열고, 한 방울의 여행을 시작해 보세요.</p></section>
+ <aside class="quality"><span class="eyebrow">WATER JOURNAL</span><div><span class="live-dot"></span><span id="qualityName">사용 전의 물</span></div><div class="quality-track"><i id="qualityBar"></i></div><small>체험용 표현 · 실제 수질 측정값 아님</small></aside>
+ <div id="objectLabel" class="object-label"><span></span><b id="objectName">우리 집의 작은 욕실</b></div>
+ <div id="sceneHint" class="scene-hint">모형을 드래그하면 다른 각도에서 볼 수 있어요</div>
+ <div id="loading" role="status">물의 여행을 준비하고 있어요…</div>
+ <div id="feedback" class="feedback" role="status" aria-live="polite"></div>
+ <section class="dock" aria-label="현재 단계 체험"><div class="mission"><span class="eyebrow" id="missionTag">직접 해보기</span><h2 id="missionTitle">우리 집에서 물 사용하기</h2><p id="missionDesc">손을 씻거나 변기 물을 내려보세요.</p></div><div id="controls" class="controls"></div><div class="advance"><span id="progressText">두 가지 사용을 체험해 보세요</span><button id="next" disabled>다음 장소로</button></div></section>
+ <footer><button id="map" class="journey-link"><span>여정 지도</span><span id="dots" aria-hidden="true"></span></button><span class="footer-note">한 방울도, 다음 이야기가 있으니까.</span><button id="reset">처음부터</button></footer>
+</main>
+<dialog id="modal"><button id="close" class="close" aria-label="닫기">닫기 ×</button><div id="modalBody"></div></dialog>
+<noscript>이 3D 체험은 JavaScript가 필요합니다. 브라우저 설정에서 JavaScript를 켜주세요.</noscript>
+</body></html>
